@@ -174,23 +174,24 @@
             },
             visao: 'tabela'
          },
-      //   computed: {
-      //       timesLibertadores(){
-      //           return this.times.slice(0,6)
-      //       },
-      //       timesRebaixados(){
-      //           return this.times.slice(16,20)
-      //       },
-      //       timesFiltrados(){
-      //          console.log('ordenou',this.ordem);
-      //          var times = _.orderBy(this.times, this.ordem.colunas, this.ordem.orientacao);
-      //          var self = this;
-      //          return _.filter(times, function(time){
-      //             var busca = self.busca.toLowerCase();
-      //             return time.nome.toLowerCase().indexOf(busca) >= 0;
-      //          })
-      //       }
-      //   },
+         
+         computed: {
+               timesLibertadores(){
+                  return this.times.slice(0,6)
+               },
+               timesRebaixados(){
+                  return this.times.slice(16,20)
+               },
+               timesFiltrados(){
+                  console.log('ordenou',this.ordem);
+                  var times = _.orderBy(this.times, this.ordem.colunas, this.ordem.orientacao);
+                  var self = this;
+                  return _.filter(times, function(time){
+                     var busca = self.busca.toLowerCase();
+                     return time.nome.toLowerCase().indexOf(busca) >= 0;
+                  })
+               }
+         },
 
          methods: {
             showAlert() {
