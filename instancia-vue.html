@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <!-- <script src="https://unpkg.com/vue"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+      {{" Data: "}}<input type="text" v-model="variavel"> {{ variavel }}
+      <br>
+      {{" Data2: "}}<input type="text" v-model="variavel2"> {{ variavel2 }}
+    <br>
+    soma : {{ parseInt(variavel) + parseInt(variavel2)? parseInt(variavel) + parseInt(variavel2) : '' }}
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        variavel: '',
+        variavel2: '',
+      }
+    })
+  </script>
+</body>
+</html>
